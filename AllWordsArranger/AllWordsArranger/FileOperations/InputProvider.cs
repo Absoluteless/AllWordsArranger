@@ -16,7 +16,7 @@ namespace AllWordsArranger.FileOperations
         }
 
 
-        internal string GetNextWord()
+        internal bool GetNextWord(out string wordForAnalysis)
         {
             
         }

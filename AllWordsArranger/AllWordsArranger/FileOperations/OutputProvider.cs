@@ -9,7 +9,7 @@
             
         }
 
-        internal void storeWord()
+        internal void StoreWord(string word)
         {
             
         }

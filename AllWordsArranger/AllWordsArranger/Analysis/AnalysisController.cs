@@ -14,5 +14,22 @@ namespace AllWordsArranger.Analysis
             _inputProvider = inputProvider;
             _outputProvider = outputProvider;
         }
+
+        public void PerformAnalyze()
+        {
+            string currentWord;
+            while (_inputProvider.GetNextWord(out currentWord))
+            {
+                if (Analyse(currentWord))
+                {
+                    _outputProvider.StoreWord(currentWord);
+                }
+            }
+        }
+
+        private bool Analyse(string currentWord)
+        {
+            
+        }
     }
 }
