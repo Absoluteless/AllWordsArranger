@@ -1,8 +1,8 @@
 ﻿using System;
-using System.CodeDom;
-using WordsAnalyzer.Analysis;
+using AllWordsArranger.Analysis;
+using AllWordsArranger.FileOperations;
 
-namespace WordsAnalyzer
+namespace AllWordsArranger
 {
     internal class Program
     {
