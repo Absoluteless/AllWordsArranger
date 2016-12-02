@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 
 namespace AllWordsArranger.FileOperations
 {
@@ -16,7 +17,7 @@ namespace AllWordsArranger.FileOperations
 
         internal void StoreWord(string wordToStore)
         {
-            File.AppendAllText(_destinationFile, wordToStore + Environment.NewLine);
+            File.AppendAllText(_destinationFile, wordToStore + Environment.NewLine, Encoding.Default);
             Stored++;
         }
     }

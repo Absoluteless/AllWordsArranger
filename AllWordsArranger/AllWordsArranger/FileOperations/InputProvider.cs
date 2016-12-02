@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Text;
 
 namespace AllWordsArranger.FileOperations
 {
@@ -10,7 +11,7 @@ namespace AllWordsArranger.FileOperations
     
         internal InputProvider(string pathToDictionary)
         {
-            _allLines = File.ReadAllLines(pathToDictionary);
+            _allLines = File.ReadAllLines(pathToDictionary, Encoding.Default);
             Cap = _allLines.Length;
         }
 
