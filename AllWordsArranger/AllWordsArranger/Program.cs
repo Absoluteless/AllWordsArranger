@@ -16,7 +16,7 @@ namespace AllWordsArranger
             var inputProvider = new InputProvider(cmdArgs[2]);
             var outputProvider = new OutputProvider(cmdArgs[3]);
             var analysisController = new AnalysisController(cmdArgs[1], inputProvider, outputProvider);
-            AnalysisController.PerformAnalyze();
+            analysisController.PerformAnalyze();
         }
     }
 }

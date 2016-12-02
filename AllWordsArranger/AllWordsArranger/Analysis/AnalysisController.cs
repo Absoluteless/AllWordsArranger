@@ -29,7 +29,7 @@ namespace AllWordsArranger.Analysis
 
         private bool Analyse(string currentWord)
         {
-            
+            return true;
         }
     }
 }
