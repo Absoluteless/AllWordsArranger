@@ -7,6 +7,8 @@ namespace AllWordsArranger.FileOperations
     {
         private readonly string _destinationFile;
 
+        internal int Stored { get; private set; }
+
         internal OutputProvider(string destinationFile)
         {
             _destinationFile = destinationFile;
@@ -15,6 +17,7 @@ namespace AllWordsArranger.FileOperations
         internal void StoreWord(string wordToStore)
         {
             File.AppendAllText(_destinationFile, wordToStore + Environment.NewLine);
+            Stored++;
         }
     }
 }
