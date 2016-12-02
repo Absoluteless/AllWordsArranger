@@ -1,24 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace AllWordsArranger.FileOperations
 {
     internal class InputProvider
     {
-        private _wtf;
+        private readonly string[] _allLines;
+        private readonly int _cap;
+        private int _currentWord;
     
         internal InputProvider(string pathToDictionary)
         {
-            
+            _allLines = File.ReadAllLines(pathToDictionary);
+            _cap = _allLines.Length;
         }
-
 
         internal bool GetNextWord(out string wordForAnalysis)
         {
-            
+            if (_currentWord < _cap)
+            {
+                wordForAnalysis = _allLines[_currentWord];
+                _currentWord++;
+                return true;
+            }
+
+            wordForAnalysis = string.Empty;
+            return false;
         }
     }
 }
